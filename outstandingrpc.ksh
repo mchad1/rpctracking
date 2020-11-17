@@ -1,7 +1,7 @@
 #!/bin/ksh 
 #https://access.redhat.com/solutions/69248
 while true; do 
-    grep -A8 $1 /proc/self/mountstats |  grep "xprt:" | awk '{print $9,$11,$12,$8}' | while read i; do
+    grep -A20 $1 /proc/self/mountstats |  grep "xprt:" | awk '{print $9,$11,$12,$8}' | while read i; do
        divisor=`echo $i | awk '{print $1}'`
        avg_flight=`echo $i | awk '{print $2}'`
        backlog=`echo $i | awk '{print $3}'`
