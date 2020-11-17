@@ -11,7 +11,7 @@ while true; do
        (( bl = backlog / divisor ))
        (( cf = cur_flight  - divisor ))
        echo "Avg_RPC_In_Filght: $aif, Avg_Backlog: $bl,  Current_in_flight: $cf"
-
+    sleep 1
     done
  
 #xprt: tcp 806 1 1 0 12 525556 525556 0 65784746 13192742420 128 1150041 65259209
